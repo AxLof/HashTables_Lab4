@@ -1,1 +1,27 @@
-﻿
+﻿HashTableChaining:
+Använder en länkad lista som bucket och itterterar över listan vid colisions.
+Hashing Algoritm: ASCII hash
+Resizing strategi: Dubblar storlek när den är >75% full
+
+HashTablePriorityQueue:
+Använder priority queue som buckets och väljer objektet med högst prioritet vid colisions.
+Buckets innehåller objektet PriorityNode som finns i PriorityNode.cs
+Hashing Algoritm: ASCII hash
+Resizing strategi: Dubblar storlek när den är >75% full
+
+HashTableStack: 
+Använder en stack som bucket, LIFO strategi.
+Hashing Algoritm: ASCII hash
+Resizing strategi: Dubblar storlek när den är >75% full och minskar med 0.8 när <50% full.
+
+HashTableLinearProbing:
+Open addressing, endast ett objekt per bucket.
+Hasing Algoritm: FNV hash
+Resizing strategi: Dubblar storlek när den är >75% full.
+
+HashTableQuadraticProbing:
+Open addressing, endast ett objekt per bucket.
+Hasing Algoritm: DJB2 hash
+Resizing strategi: Storlek x1.5 när den är >75% full.
+
+
