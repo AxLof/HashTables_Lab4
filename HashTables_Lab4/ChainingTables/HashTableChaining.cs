@@ -34,8 +34,12 @@ public class HashTableChaining : IHashTable
         int hash = HashingAlgorithm(key, Size);
         _buckets[hash].AddLast(new KeyValuePair<string, object>(key, value));
         Console.WriteLine($"{key} has been added to the table!");
-        OccupiedBuckets++;
-        if(!IsResizing) Resize();
+        if (!(_buckets[hash].Count > 1))
+        {
+            // Öka endast om bucketen verkligen var tom
+            OccupiedBuckets++;
+        }
+        if (!IsResizing) Resize();
     }
 
     public object Get(string key)

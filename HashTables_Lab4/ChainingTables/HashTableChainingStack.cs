@@ -115,7 +115,7 @@ public class HashTableChainingStack : IHashTable
             // Slänger ett error om ingen nyckel matchar
             throw new KeyNotFoundException("No key matching the given argument");
         }
-        if (newStack.Count != bucket.Count)
+        if (bucket.Count > 0 && newStack.Count == 0)
         {
             OccupiedBuckets--;
         }

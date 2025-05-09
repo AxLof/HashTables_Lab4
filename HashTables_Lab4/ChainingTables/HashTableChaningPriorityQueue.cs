@@ -164,7 +164,8 @@ public class HashTableChainingPriority : IHashTable
             {
                 while (bucket.Count >0)
                 {
-                    Add(bucket.Dequeue().Key, bucket.Dequeue().Value, bucket.Dequeue().Priority);
+                    var item = bucket.Dequeue();
+                    Add(item.Key, item.Value, item.Priority);
                 }
             }
 

@@ -14,7 +14,7 @@ public class Tests_HashTableChaining
     [InlineData("h23daåke")]
     public void ReturnsCorrectStudent(string student)
     {
-        HashTableChaining testTable = CreateTestTable();
+        HashTableChaining testTable = CreateTestTable(10);
         
         object result = testTable.Get(student);
         
@@ -28,7 +28,7 @@ public class Tests_HashTableChaining
     [InlineData("h23daåke")]
     public void RemoveStudent(string student)
     {
-        HashTableChaining testTable = CreateTestTable();
+        HashTableChaining testTable = CreateTestTable(10);
         
         testTable.Delete(student);
         
@@ -38,7 +38,7 @@ public class Tests_HashTableChaining
     [Fact]
     public void TestResizing()
     {
-        HashTableChaining testTable = CreateTestTable();
+        HashTableChaining testTable = CreateTestTable(6);
 
         int currentTableSize = testTable.Size;
             
@@ -52,14 +52,14 @@ public class Tests_HashTableChaining
         testTable.Add(Gustav.StudentId, Gustav);
         testTable.Add(Helge.StudentId, Helge);
         
-        // Nu ska table vara 80% full och bör därför dubbbla i storlek. 
+        // Nu ska table vara min 80% full och bör därför dubbla i storlek. 
         Assert.Equal(currentTableSize*2, testTable.Size);
         
     }
 
-    private HashTableChaining CreateTestTable()
+    private HashTableChaining CreateTestTable(int size)
     {
-        HashTableChaining testTable = new HashTableChaining();
+        HashTableChaining testTable = new HashTableChaining(size);
         Student Adam = new Student("h20adada", "Adam Adamson", 22);
         Student Bertil = new Student("h22beber", "Bertil Bertilsson", 41);
         Student Caesar = new Student("h23cajoh", "Caesar Johansson", 28);

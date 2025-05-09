@@ -26,7 +26,7 @@ public class HashTableLinearProbing : IHashTable
     {
         int hash = HashingAlgorithm(key, Size);
 
-        while (true)
+        while (hash < Size)
         {
             if (_buckets[hash].Key == null)
             {
@@ -45,7 +45,7 @@ public class HashTableLinearProbing : IHashTable
     {
         int hash = HashingAlgorithm(key, Size);
 
-        while (true)
+        while (hash < Size)
         {
             if(hash > Size-1)
             {
@@ -62,8 +62,8 @@ public class HashTableLinearProbing : IHashTable
 
             hash++;
         }
-        
-        
+        // Slänger ett error om programmet gått igenom alla nycklar
+        throw new KeyNotFoundException("No key matching the specified argument");
     }
 
     public void Delete(string key)
@@ -82,6 +82,7 @@ public class HashTableLinearProbing : IHashTable
             {
                 // Kunde inte sätta key och value till null manuellt så man får skapa ett nytt null par. 
                 _buckets[hash] = new KeyValuePair<string?, object?>(null, null);
+                OccupiedBuckets--;
                 return;
             }
 

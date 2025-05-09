@@ -95,6 +95,7 @@ public class HashTableQuadraticProbing : IHashTable
             {
                 // Kunde inte sätta key och value till null manuellt så man får skapa ett nytt null par. 
                 _buckets[probedHash] = new KeyValuePair<string?, object?>(null, null);
+                OccupiedBuckets--;
                 return;
             }
             
