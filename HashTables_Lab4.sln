@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTables_Lab4", "HashTables_Lab4\HashTables_Lab4.csproj", "{643D26CC-A2CA-40B3-BC0B-CF10576F237C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTables.Tests", "HashTables.Tests\HashTables.Tests.csproj", "{F25102FC-801B-48BF-B8FC-2BE3573B01FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{643D26CC-A2CA-40B3-BC0B-CF10576F237C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{643D26CC-A2CA-40B3-BC0B-CF10576F237C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{643D26CC-A2CA-40B3-BC0B-CF10576F237C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{643D26CC-A2CA-40B3-BC0B-CF10576F237C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25102FC-801B-48BF-B8FC-2BE3573B01FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25102FC-801B-48BF-B8FC-2BE3573B01FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25102FC-801B-48BF-B8FC-2BE3573B01FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25102FC-801B-48BF-B8FC-2BE3573B01FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
